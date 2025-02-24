@@ -2,6 +2,7 @@ from cProfile import label
 
 import FreeSimpleGUI as sg
 from pandas.core.config_init import pc_max_info_rows_doc
+from scipy.constants import value
 
 import functions
 from myapp import todo_to_remove, index
@@ -40,7 +41,8 @@ while True:
             todos[index] = new_todo
             functions.write_todos(todos)
             window['todos'].update(value=todos)
-
+        case 'todos':
+            window['todo'].update(value=values['todos'][0])
         case sg.WIN_CLOSED:
             break
 
