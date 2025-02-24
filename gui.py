@@ -15,8 +15,8 @@ input_box = sg.InputText(tooltip="Enter a to-do", key='todo')
 list_box = sg.Listbox(values=functions.get_todos(), key='todos',
                       enable_events=True, size=[45, 10])
 edit_button = sg.Button("Edit")
-add_button = sg.Button("Add")
-complete_button = sg.Button("Complete")
+add_button = sg.Button(size=10, image_source="add.png")
+complete_button = sg.Button(size=10, image_source="complete.png")
 exit_button = sg.Button("Exit")
 
 
