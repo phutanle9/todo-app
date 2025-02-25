@@ -1,8 +1,12 @@
 import time
 import FreeSimpleGUI as sg
 import functions
+import os
 
-sg.theme("DarkPurple4")
+if not os.path.exists("todos.txt"):
+    with open("todos.txt","w") as file:
+        pass
+sg.theme("Black")
 
 # Text element for displaying the time
 clock = sg.Text('', key='clock')
